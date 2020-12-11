@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: loic <loic@student.42lyon.fr>              +#+  +:+       +#+        */
+/*   By: lfourmau <lfourmau@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/10 13:32:14 by loic              #+#    #+#             */
-/*   Updated: 2020/12/10 15:55:22 by loic             ###   ########lyon.fr   */
+/*   Updated: 2020/12/11 10:31:49 by lfourmau         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,34 +69,9 @@ int		get_next_line(int fd, char **line)
 		buffer = ft_strjoin(buffer, tmp);
 	}
 	free(tmp);
-	line[0] = before_lb(buffer);
+	*line = before_lb(buffer);
 	buffer = after_lb(buffer);
 	if (read_return == 0)
 		return (0);
 	return (1);
-}
-
-
-#include <fcntl.h>
-#include <stdio.h>
-int		main(void)
-{
-	char	*line;
-	int		fd;
-	line = NULL;
-	fd = open("hello.txt", O_RDONLY);
-	if (fd == -1)
-		return (-1);
-	while (get_next_line(fd, &line) == 1)
-	{
-		printf("%s\n", line);
-		free(line);
-	}
-	printf("%s\n", line);
-	free(line);
-	if (close(fd) == -1)
-		return (-1);
-	while (1)
-		;
-	return (0);
 }

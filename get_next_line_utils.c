@@ -3,15 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line_utils.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: loic <loic@student.42lyon.fr>              +#+  +:+       +#+        */
+/*   By: lfourmau <lfourmau@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/10 13:30:39 by loic              #+#    #+#             */
-/*   Updated: 2020/12/10 15:53:43 by loic             ###   ########lyon.fr   */
+/*   Updated: 2020/12/11 10:19:19 by lfourmau         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
-
 
 int			ft_strlen(const char *s)
 {
@@ -25,10 +24,10 @@ int			ft_strlen(const char *s)
 	return (i);
 }
 
-char	*ft_strjoin(char const *prefixe, char const *suffixe)
+char		*ft_strjoin(char const *prefixe, char const *suffixe)
 {
 	char	*concat;
-	int 	len;
+	int		len;
 	int		i;
 	int		j;
 
@@ -54,7 +53,7 @@ char	*ft_strjoin(char const *prefixe, char const *suffixe)
 	return (concat);
 }
 
-int		ft_isline_break(const char *s)
+int			ft_isline_break(const char *s)
 {
 	int i;
 
@@ -70,7 +69,7 @@ int		ft_isline_break(const char *s)
 	return (0);
 }
 
-char	*ft_strlcpy(char *dest, const char *src, size_t size)
+char		*ft_strlcpy(char *dest, const char *src, size_t size)
 {
 	size_t i;
 
@@ -92,7 +91,7 @@ char	*ft_strlcpy(char *dest, const char *src, size_t size)
 	return (dest);
 }
 
-char	*ft_substr(char const *s, unsigned int start, size_t len)
+char		*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	size_t	i;
 	char	*result;

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.h                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: loic <loic@student.42lyon.fr>              +#+  +:+       +#+        */
+/*   By: lfourmau <lfourmau@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/10 13:29:06 by loic              #+#    #+#             */
-/*   Updated: 2020/12/10 15:46:10 by loic             ###   ########lyon.fr   */
+/*   Updated: 2020/12/11 10:20:23 by lfourmau         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 # include <unistd.h>
 
 int		get_next_line(int fd, char **line);
-int	ft_isline_break(const char *s);
+int		ft_isline_break(const char *s);
 int		ft_strlen(const char *s);
 char	*ft_strjoin(char const *prefixe, char const *suffixe);
 char	*ft_strlcpy(char *dest, const char *src, size_t size);
